@@ -1,0 +1,8 @@
+sap_xssec
+cfenv
+sap_cf_logging
+numpy
+flask
+tensorflow
+tensorflow-hub
+gunicorn
