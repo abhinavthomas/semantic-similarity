@@ -1,4 +1,4 @@
-#Semantic Similarity
+# Semantic Similarity
 
 The semsim is Python3 based web application(Flask - API) that can be used to identify the semantic similarity between agiven input text and a set of inputs. Semantic similarity is a measure of the degree to which two pieces of text carry the same meaning. This is broadly useful in obtaining good coverage over the numerous ways that a thought can be expressed using language without needing to manually enumerate them. 
 
