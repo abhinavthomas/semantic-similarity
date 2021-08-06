@@ -1,6 +1,6 @@
 # Semantic Similarity
 
-The semsim is Python3 based web application(Flask - API) that can be used to identify the semantic similarity between agiven input text and a set of inputs. Semantic similarity is a measure of the degree to which two pieces of text carry the same meaning. This is broadly useful in obtaining good coverage over the numerous ways that a thought can be expressed using language without needing to manually enumerate them. 
+The semsim is Python3 based web application(Fast API) that can be used to identify the semantic similarity between agiven input text and a set of inputs. Semantic similarity is a measure of the degree to which two pieces of text carry the same meaning. This is broadly useful in obtaining good coverage over the numerous ways that a thought can be expressed using language without needing to manually enumerate them. 
 
 ![Semantic Similarity](https://www.gstatic.com/aihub/tfhub/universal-sentence-encoder/example-similarity.png)
 
@@ -33,42 +33,22 @@ Follow the steps described in [CONTRIBUTE.md](CONTRIBUTE.md)
   
 
 ``` python
-  python app.py
+  uvicorn app.main:APP
   ```
 
 ### Request parameters and body for the endpoints
 
 1. **/similarity/**
-  1. Params: None
-  2. Body :
+  1. Query Params: text, show
 
-``` json
-        {
-    "input_text": "restart system",
-    "input_list": [
-        "I like my phone",
-        "restart system",
-        "System restart",
-        "system restart",
-        "systems restart",
-        "My phone is not good.",
-        "Your cellphone looks great.",
-        "Will it snow tomorrow?"
-    ]
-}
+```
+  restart system
 ```
 
 Response: 
-
+In the order of similarity
 ``` json
-    {"d": {"I like my phone": 0.05919026955962181,
-  "My phone is not good.": 0.0359722301363945,
-  "System restart": 0.8752236366271973,
-  "Will it snow tomorrow?": 0.03468877077102661,
-  "Your cellphone looks great.": -0.029877029359340668,
-  "restart system": 1.0,
-  "system restart": 0.8752236366271973,
-  "systems restart": 0.7790520787239075}}
+  [{"id":0,"text":""}]
 ```
 
 ## Tests

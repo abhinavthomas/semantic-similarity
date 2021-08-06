@@ -43,7 +43,7 @@ def app_run_check():
     return 'Hello!'
 
 
-@app.get('/similar/', response_model=List[Document])
+@app.get('/similarity/', response_model=List[Document])
 def search(text: str, show: Optional[int] = 10) -> List[Document]:
     try:
         is_valid, error, query = _validate_request(text)
